@@ -3,6 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   background: #f4f4f4;
   color: #333;
   display: flex;
@@ -11,8 +12,9 @@ body {
 
 /* Dashboard Layout */
 .dashboard {
+  overflow: hidden;
   display: grid;
-  grid-template-columns: 250px 1fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 100%;
   height: 100%;
   padding: 20px;
@@ -20,7 +22,7 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: fit-content;
+  width: 200px;
   height: fit-content;
   background: white;
   padding: 20px;
@@ -89,9 +91,15 @@ body {
 
 /* Main Content */
 .content {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  box-sizing: border-box;
   padding: 20px;
+}
+
+.content hr {
+  width: 100%;
 }
 
 header {
@@ -99,6 +107,7 @@ header {
 }
 
 header h1 {
+  color: #0d00a4;
   font-size: 2rem;
 }
 
@@ -111,6 +120,43 @@ header p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
+}
+
+.widgets .to-do {
+  width: 400px;
+  height: 400px;
+}
+
+.widgets .time-tracker {
+  width: 300px;
+  height: 300px;
+}
+
+.widgets .activity {
+  width: 300px;
+  height: 300px;
+}
+
+@media (min-width: 1024px) {
+  .widgets {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "todo time-tracker activity";
+  }
+
+  .to-do {
+    grid-area: todo;
+    height: 100%;
+  }
+
+  .time-tracker {
+    grid-area: time-tracker;
+    justify-self: start;
+  }
+
+  .activity {
+    grid-area: activity;
+    justify-self: start;
+  }
 }
 
 .widget {
