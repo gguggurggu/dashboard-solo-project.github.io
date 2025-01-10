@@ -7,7 +7,7 @@ body {
   background: #f4f4f4;
   color: #333;
   display: flex;
-  height: 100vh;
+  height: 100%;
 }
 
 /* Dashboard Layout */
@@ -129,18 +129,40 @@ header p {
 
 .widgets .time-tracker {
   width: 300px;
-  height: 300px;
+  height: 400px;
 }
 
 .widgets .activity {
   width: 300px;
-  height: 300px;
+  height: 400px;
+}
+
+.widgets2 .news {
+  width: 400px;
+  height: 200px;
+}
+
+.widgets2 .budget-book {
+  width: 620px;
+  height: 200px;
+}
+
+.widgets2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin-top: 20px;
+  gap: 20px;
 }
 
 @media (min-width: 1024px) {
   .widgets {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: "todo time-tracker activity";
+  }
+
+  .widgets2 {
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "news budget-book";
   }
 
   .to-do {
@@ -156,6 +178,14 @@ header p {
   .activity {
     grid-area: activity;
     justify-self: start;
+  }
+
+  .news {
+    grid-area: news;
+  }
+
+  .budget-book {
+    grid-area: budget-book;
   }
 }
 
