@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/style/dashBoard.css" />
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <h2>My Dashboard</h2>
+
+        <!--Profile section-->
+        <nav>
+          <ul>
+            <li>
+              <div class="profile">
+                <a href="#">
+                  <button class="profile-email">
+                    <img
+                      src="/images/dashBoard/img-profile.jpg"
+                      class="img-profile"
+                    /></button
+                ></a>
+              </div>
+            </li>
+          </ul>
+        </nav>
+
+        <!--General section-->
+        <h3>General</h3>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  class="dashboard-button"
+                  src="/images/dashBoard/house-button.png"
+                />
+                Home</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="dashboard-button"
+                  src="/images/dashBoard/list-button.png"
+                />
+                Tasks</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  class="dashboard-button"
+                  src="/images/dashBoard/settings-button.png"
+                />
+                Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <!--Link section-->
+        <h3>Link</h3>
+        <nav>
+          <ul>
+            <li><a href="#">Notion</a></li>
+            <li><a href="#">Slack</a></li>
+            <li><a href="#">Zoom</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="content">
+        <header>
+          <h1>Good Morning, User!</h1>
+          <p>Here’s what’s happening today:</p>
+        </header>
+
+        <section class="widgets">
+          <!-- To-Do List Widget -->
+          <div class="widget to-do">
+            <h3>To-Do List</h3>
+            <ul>
+              <li><input type="checkbox" /> Call Linda before vacation</li>
+              <li><input type="checkbox" /> Finish sales presentation</li>
+              <li><input type="checkbox" /> Review analytics report</li>
+            </ul>
+            <button>Add Task</button>
+          </div>
+
+          <!-- Time Tracker Widget -->
+          <div class="widget time-tracker">
+            <h3>Time Tracker</h3>
+            <div class="timer">00:00:00</div>
+            <button>Start</button>
+          </div>
+
+          <!-- Activity Summary Widget -->
+          <div class="widget activity">
+            <h3>Activity Summary</h3>
+            <p>Tasks Completed: <strong>1/10</strong></p>
+            <p>Projects Completed: <strong>3/5</strong></p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/scripts/dashBoard.js"></script>
+  </body>
+</html>
