@@ -207,8 +207,11 @@ header p {
 }
 
 .to-do ul {
+  width: 400px;
+  height: 150px;
   list-style: none;
   padding: 0;
+  overflow-y: auto;
 }
 
 .to-do ul li {
