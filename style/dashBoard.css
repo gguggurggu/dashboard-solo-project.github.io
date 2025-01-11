@@ -23,7 +23,7 @@ body {
 /* Sidebar */
 .sidebar {
   width: 200px;
-  height: fit-content;
+  height: 653px;
   background: white;
   padding: 20px;
   border-radius: 20px;
@@ -34,6 +34,8 @@ body {
 .sidebar h2 {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar h3 {
@@ -72,11 +74,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .img-profile {
-  width: 100px;
-  height: 100px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: none;
 }
@@ -124,27 +128,17 @@ header p {
 
 .widgets .to-do {
   width: 400px;
-  height: 400px;
+  height: 250px;
 }
 
 .widgets .time-tracker {
   width: 300px;
-  height: 400px;
+  height: 250px;
 }
 
 .widgets .activity {
   width: 300px;
-  height: 400px;
-}
-
-.widgets2 .news {
-  width: 400px;
-  height: 200px;
-}
-
-.widgets2 .budget-book {
-  width: 620px;
-  height: 200px;
+  height: 250px;
 }
 
 .widgets2 {
@@ -152,6 +146,15 @@ header p {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 20px;
   gap: 20px;
+}
+.widgets2 .news {
+  width: 400px;
+  height: 150px;
+}
+
+.widgets2 .budget-book {
+  width: 620px;
+  height: 150px;
 }
 
 @media (min-width: 1024px) {
