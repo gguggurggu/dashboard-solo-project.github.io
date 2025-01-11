@@ -211,13 +211,17 @@ header p {
   height: 150px;
   list-style: none;
   padding: 0;
+  overflow-x: hidden;
   overflow-y: auto;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
 
 .to-do ul li {
   margin: 5px 0;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .to-do ul li input {
@@ -246,6 +250,7 @@ header p {
   height: 27px;
   border: none;
   background-color: white;
+  outline: none;
 }
 
 .plus-button {

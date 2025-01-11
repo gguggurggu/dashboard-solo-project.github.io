@@ -108,19 +108,12 @@
           <div class="widget to-do">
             <h3>To-Do List</h3>
             <div class="to-do-input">
-              <input class="to-do-input-input"/>
-              <button class="to-do-input-button"><img class="plus-button" src="/images/icons/plus-button.png"></button>
+              <input class="to-do-input-input js-to-do-input-input" />
+              <button class="to-do-input-button js-to-do-input-button">
+                <img class="plus-button" src="/images/icons/plus-button.png" />
+              </button>
             </div>
-            <ul>
-              <li><input type="checkbox" /> Call Linda before vacation</li>
-              <li><input type="checkbox" /> Finish sales presentation</li>
-              <li><input type="checkbox" /> Review analytics report</li>
-              <li><input type="checkbox" /> Call Linda before vacation</li>
-              <li><input type="checkbox" /> Finish sales presentation</li>
-              <li><input type="checkbox" /> Review analytics report</li> <li><input type="checkbox" /> Call Linda before vacation</li>
-              <li><input type="checkbox" /> Finish sales presentation</li>
-              <li><input type="checkbox" /> Review analytics report</li>
-            </ul>
+            <ul class="js-to-do-ul"></ul>
           </div>
 
           <div class="widget time-tracker">
@@ -152,6 +145,6 @@
       </main>
     </div>
 
-    <script src="/scripts/dashBoard.js"></script>
+    <script type="module" src="/scripts/dashBoard.js"></script>
   </body>
 </html>
