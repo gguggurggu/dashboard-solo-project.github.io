@@ -254,12 +254,38 @@ header p {
 }
 
 .plus-button {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
 }
 
 .timer {
-  font-size: 2rem;
-  margin: 10px 0;
+  font-size: 4rem;
+  margin: 30px 0;
   text-align: center;
+}
+
+.timer-button-section {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  gap: 10px;
+}
+
+.timer-button {
+  border: none;
+  background-color: white;
+}
+
+.img-timer-start-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.img-timer-stop-button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
 }
