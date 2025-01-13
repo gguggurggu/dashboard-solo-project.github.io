@@ -221,7 +221,9 @@ header p {
 .to-do ul li {
   margin: 5px 0;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
 }
 
 .to-do ul li input {
@@ -253,9 +255,18 @@ header p {
   outline: none;
 }
 
+.to-do-delete-button {
+  margin-left: auto;
+}
+
 .plus-button {
   width: 20px;
   height: 20px;
+}
+
+.delete-button {
+  width: 15px;
+  height: 15px;
 }
 
 .stopwatch {
