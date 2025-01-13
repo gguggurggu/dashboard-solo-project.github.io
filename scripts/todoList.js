@@ -1,4 +1,4 @@
-export function addTodoList() {
+export function renderTodoList() {
   const savedTodos = JSON.parse(localStorage.getItem("save-to-do")) || [];
   const inputElement = document.querySelector(".js-to-do-input-input");
   const todoListContainer = document.querySelector(".js-to-do-ul");

@@ -1,3 +1,5 @@
-import { addTodoList } from "./todoList.js";
+import { renderTimeTracker } from "./timeTracker.js";
+import { renderTodoList } from "./todoList.js";
 
-addTodoList();
+renderTodoList();
+renderTimeTracker();
