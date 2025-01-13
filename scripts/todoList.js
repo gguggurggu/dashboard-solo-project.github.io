@@ -29,7 +29,12 @@ export function addTodoList() {
     todoListContainer.innerHTML = "";
     savedTodos.forEach((todo) => {
       const listItem = createTodoItem(todo);
+
+      const scrollToBottom = (container) => {
+        container.scrollTop = container.scrollHeight;
+      };
       todoListContainer.appendChild(listItem);
+      scrollToBottom(todoListContainer);
     });
   };
 
