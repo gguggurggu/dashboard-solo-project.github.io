@@ -9,7 +9,7 @@ export function addTodoList() {
                 <button class="to-do-input-button to-do-delete-button js-to-do-delete-button">
                   <img
                     class="delete-button"
-                    src="/images/icons/delete-button.png"
+                    src="/images/todo-icons/delete-button.png"
                   /> </button>`;
 
     listItem
