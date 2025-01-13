@@ -25,21 +25,39 @@ export function addTodoList() {
     return listItem;
   };
 
-  savedTodos.forEach((todo) => {
-    todoListContainer.appendChild(createTodoItem(todo));
-  });
+  const refreshTodoList = () => {
+    todoListContainer.innerHTML = "";
+    savedTodos.forEach((todo) => {
+      const listItem = createTodoItem(todo);
+      todoListContainer.appendChild(listItem);
+    });
+  };
+
+  const addNewTodo = () => {
+    const inputValue = inputElement.value.trim();
+
+    if (inputValue) {
+      savedTodos.push(inputValue);
+      localStorage.setItem("save-to-do", JSON.stringify(savedTodos));
+      inputElement.value = "";
+    }
+  };
 
   document
     .querySelector(".js-to-do-input-button")
     .addEventListener("click", () => {
-      const inputValue = inputElement.value.trim();
+      addNewTodo();
+      refreshTodoList();
+    });
 
-      if (inputValue) {
-        todoListContainer.appendChild(createTodoItem(inputValue));
-        savedTodos.push(inputValue);
-        localStorage.setItem("save-to-do", JSON.stringify(savedTodos));
-
-        inputElement.value = "";
+  document
+    .querySelector(".js-to-do-input-input")
+    .addEventListener("keypress", (event) => {
+      if (event.key === "Enter") {
+        addNewTodo();
+        refreshTodoList();
       }
     });
+
+  refreshTodoList();
 }
