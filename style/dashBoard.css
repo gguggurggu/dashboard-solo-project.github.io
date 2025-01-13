@@ -258,32 +258,33 @@ header p {
   height: 20px;
 }
 
-.timer {
+.stopwatch {
   font-size: 4rem;
   margin: 30px 0;
   text-align: center;
 }
 
-.timer-button-section {
+.stopwatch-button-section {
   display: flex;
   justify-content: center;
   padding: 0;
+  margin: 0;
   gap: 10px;
 }
 
-.timer-button {
+.stopwatch-button {
   border: none;
   background-color: white;
 }
 
-.img-timer-start-button {
+.img-stopwatch-start-button {
   width: 30px;
   height: 30px;
   display: flex;
   align-items: center;
 }
 
-.img-timer-stop-button {
+.img-stopwatch-stop-button {
   width: 30px;
   height: 30px;
   display: flex;
