@@ -7,4 +7,15 @@ export function renderDate() {
   const getDateHTML = document.querySelector(".js-today");
 
   getDateHTML.innerHTML = `<p class="js-today">${today}</p>`;
+
+  const hour = date.hour();
+
+  const getHelloHTML = document.querySelector(".js-hello");
+  if (hour >= 0 && hour < 12) {
+    getHelloHTML.innerHTML = `Good morning, User!`;
+  } else if (hour >= 12 && hour < 18) {
+    getHelloHTML.innerHTML = `Good afternoon, User!`;
+  } else if (hour >= 18 && hour <= 23) {
+    getHelloHTML.innerHTML = `Good evening, User!`;
+  }
 }
