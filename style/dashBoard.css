@@ -208,7 +208,7 @@ header p {
 
 .to-do ul {
   width: 400px;
-  height: 130px;
+  height: 205px;
   list-style: none;
   padding: 0;
   overflow-x: hidden;
@@ -283,6 +283,11 @@ header p {
 }
 
 .stopwatch-button {
+  border: none;
+  background-color: white;
+}
+
+.pause-button {
   border: none;
   background-color: white;
 }
