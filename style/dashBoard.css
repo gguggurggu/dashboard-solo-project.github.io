@@ -262,6 +262,13 @@ header p {
 .plus-button {
   width: 20px;
   height: 20px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  border-radius: 50%;
+}
+
+.plus-button:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
 }
 
 .delete-button {
@@ -278,13 +285,20 @@ header p {
 .stopwatch-button-section {
   display: flex;
   justify-content: center;
-  padding: 0;
-  gap: 10px;
+  gap: 20px;
 }
 
 .stopwatch-button {
   border: none;
+  border-radius: 50%;
   background-color: white;
+  padding: 0 0;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stopwatch-button:hover {
+  background-color: #f0f0f0;
+  border-radius: 50%;
 }
 
 .pause-button {
