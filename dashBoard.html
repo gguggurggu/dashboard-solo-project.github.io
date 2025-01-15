@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style/dashBoard.css" />
   </head>
   <body>
-    <div class="dashboard">
+    <div class="dashboard js-dashboard">
       <!-- Sidebar -->
       <aside class="sidebar">
         <h2>My Dashboard</h2>
@@ -18,13 +18,12 @@
           <ul>
             <li>
               <div class="profile">
-                <a href="#">
-                  <button class="profile-email">
-                    <img
-                      src="/images/dashBoard/img-profile.jpg"
-                      class="img-profile"
-                    /></button
-                ></a>
+                <button class="profile-contact js-open-trigger-button">
+                  <img
+                    src="/images/dashBoard/img-profile.jpg"
+                    class="img-profile"
+                  />
+                </button>
               </div>
             </li>
           </ul>
@@ -177,6 +176,12 @@
           </div>
         </section>
       </main>
+    </div>
+
+    <div class="pop-up" id="pop-up">
+      <h2>Contact Info.</h2>
+      <p>email: sentmeroses121@gmail.com</p>
+      <button class="js-close-trigger-button">Close</button>
     </div>
 
     <script type="module" src="/scripts/dashBoard.js"></script>

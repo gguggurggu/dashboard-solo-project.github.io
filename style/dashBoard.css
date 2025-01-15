@@ -12,12 +12,17 @@ body {
 
 /* Dashboard Layout */
 .dashboard {
-  overflow: hidden;
+  overflow: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 100%;
   height: 100%;
   padding: 20px;
+  transition: filter 0.2s ease;
+}
+
+.blur {
+  filter: blur(10px) grayscale(100%);
 }
 
 /* Sidebar */
@@ -68,7 +73,7 @@ body {
   align-items: center;
 }
 
-.profile-email {
+.profile-contact {
   background-color: transparent;
   border: none;
   display: flex;
@@ -76,6 +81,7 @@ body {
   align-items: center;
   margin-top: 30px;
   margin-bottom: 30px;
+  outline: none;
 }
 
 .img-profile {
@@ -83,6 +89,45 @@ body {
   height: 130px;
   border-radius: 50%;
   border: none;
+}
+
+.pop-up {
+  width: 400px;
+  background: #fff;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  text-align: center;
+  padding: 0 30px 30px;
+  color: #333;
+  visibility: hidden;
+  transition: transform 0.2s ease;
+}
+
+.open-pop-up {
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.pop-up h2 {
+  font-size: 38px;
+  font-weight: 500;
+  margin: 30px 0 10px;
+}
+
+.pop-up button {
+  width: 100%;
+  margin-top: 50px;
+  padding: 10px 0;
+  background-color: #6fd649;
+  color: #fff;
+  border: 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .dashboard-button {
