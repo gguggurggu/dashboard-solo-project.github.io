@@ -2,6 +2,9 @@ export function renderTodoList() {
   const savedTodos = JSON.parse(localStorage.getItem("save-to-do")) || [];
   const inputElement = document.querySelector(".js-to-do-input-input");
   const todoListContainer = document.querySelector(".js-to-do-ul");
+  const emptyMessage = document.createElement("p");
+  emptyMessage.className = "empty-message";
+  emptyMessage.innerHTML = `<img src="/images/todo-icons/empty.png"><span><strong>No plans yet?</strong> Let's make some magic!</span>`;
 
   const createTodoItem = (todo) => {
     const listItem = document.createElement("li");
@@ -20,6 +23,9 @@ export function renderTodoList() {
         if (index !== -1) {
           savedTodos.splice(index, 1);
           localStorage.setItem("save-to-do", JSON.stringify(savedTodos));
+          if (savedTodos.length === 0) {
+            todoListContainer.appendChild(emptyMessage);
+          }
         }
       });
     return listItem;
@@ -27,15 +33,20 @@ export function renderTodoList() {
 
   const refreshTodoList = () => {
     todoListContainer.innerHTML = "";
-    savedTodos.forEach((todo) => {
-      const listItem = createTodoItem(todo);
 
-      const scrollToBottom = (container) => {
-        container.scrollTop = container.scrollHeight;
-      };
-      todoListContainer.appendChild(listItem);
-      scrollToBottom(todoListContainer);
-    });
+    if (savedTodos.length === 0) {
+      todoListContainer.appendChild(emptyMessage);
+    } else {
+      savedTodos.forEach((todo) => {
+        const listItem = createTodoItem(todo);
+
+        const scrollToBottom = (container) => {
+          container.scrollTop = container.scrollHeight;
+        };
+        todoListContainer.appendChild(listItem);
+        scrollToBottom(todoListContainer);
+      });
+    }
   };
 
   const addNewTodo = () => {

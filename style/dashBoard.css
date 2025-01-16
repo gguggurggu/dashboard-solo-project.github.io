@@ -365,6 +365,23 @@ header p {
   outline: none;
 }
 
+.empty-message {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 1.2rem;
+  color: #666;
+  flex-direction: column;
+  gap: 15px;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.empty-message img {
+  width: 80px;
+  opacity: 70%;
+}
+
 .to-do-delete-button {
   margin-left: auto;
 }
