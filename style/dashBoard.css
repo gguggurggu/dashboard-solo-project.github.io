@@ -241,7 +241,7 @@ header p {
   height: 250px;
 }
 
-.widgets .calendar {
+.widgets .subscription {
   width: 300px;
   height: 250px;
 }
@@ -256,25 +256,25 @@ header p {
   animation-delay: 0.4s;
 }
 
-.widgets2 .news {
+.widgets2 .spotify {
   width: 400px;
   height: 150px;
 }
 
-.widgets2 .spotify {
-  width: 620px;
+.widgets2 .activity {
+  width: 660px;
   height: 150px;
 }
 
 @media (min-width: 1024px) {
   .widgets {
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "todo time-tracker calendar";
+    grid-template-areas: "todo time-tracker subscription";
   }
 
   .widgets2 {
     grid-template-columns: 1fr 2fr;
-    grid-template-areas: "news spotify";
+    grid-template-areas: "spotify activity";
   }
 
   .to-do {
@@ -287,17 +287,17 @@ header p {
     justify-self: start;
   }
 
-  .calendar {
-    grid-area: calendar;
+  .subscription {
+    grid-area: subscription;
     justify-self: start;
-  }
-
-  .news {
-    grid-area: news;
   }
 
   .spotify {
     grid-area: spotify;
+  }
+
+  .activity {
+    grid-area: activity;
   }
 }
 
@@ -394,7 +394,6 @@ header p {
 }
 
 .plus-button:hover {
-  background-color: white;
   border-radius: 50%;
 }
 
@@ -415,17 +414,56 @@ header p {
   gap: 20px;
 }
 
-.stopwatch-button {
+.stopwatch-start-button {
   border: none;
   border-radius: 50%;
   background-color: transparent;
   padding: 0 0;
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.stopwatch-button:hover {
-  background-color: white;
+.stopwatch-start-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(173, 216, 230, 0.7),
+    rgba(255, 239, 186, 0.7)
+  );
+  backdrop-filter: blur(5px);
   border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch-start-button:active {
+  background: linear-gradient(135deg, rgba(173, 216, 230), rgba(255, 239, 186));
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch-stop-button {
+  border: none;
+  border-radius: 50%;
+  background-color: transparent;
+  padding: 0 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stopwatch-stop-button:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 107, 0.7),
+    rgba(255, 239, 186, 0.7)
+  );
+  backdrop-filter: blur(5px);
+  border-radius: 50%;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.stopwatch-stop-button:active {
+  background: linear-gradient(135deg, rgba(255, 107, 107), rgba(255, 239, 186));
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .pause-button {
@@ -453,7 +491,7 @@ header p {
 }
 
 .spotify iframe {
-  width: 620px;
-  height: 200px;
+  width: 100%;
+  height: 200%;
   border: none;
 }
