@@ -19,3 +19,12 @@ export function renderDate() {
     getHelloHTML.innerHTML = `Good evening, User!`;
   }
 }
+
+export function showDate() {
+  let date = dayjs();
+  const today = date.format("dddd, MMMM D");
+
+  const getDateHTML = document.querySelector(".js-today-date");
+
+  getDateHTML.innerHTML = `<span class="js-today-date">${today}</span>`;
+}

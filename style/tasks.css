@@ -1,0 +1,97 @@
+body {
+  overflow: auto;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #333;
+  display: flex;
+  height: 100vh;
+}
+
+/* Top Menu Layout */
+.top-menu {
+  padding: 40px 60px;
+}
+
+.home-button {
+  background-color: transparent;
+  border: none;
+  width: 20px;
+}
+
+.home-button img {
+  width: 20px;
+}
+
+/* Task Board Layout */
+.task-board {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* Task Column Styling */
+.task-column {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: fit-content;
+  padding: 15px;
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.column-header h3 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.task-count {
+  background: #ff5a5a;
+  color: white;
+  font-size: 0.8rem;
+  padding: 4px 8px;
+  border-radius: 12px;
+}
+
+/* Task Card Styling */
+.task-card {
+  background: #f3f4f6;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.task-card h4 {
+  font-size: 1rem;
+  margin: 0;
+  color: #2c3e50;
+}
+
+.task-card p {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+  margin: 8px 0;
+}
+
+.task-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #95a5a6;
+}
