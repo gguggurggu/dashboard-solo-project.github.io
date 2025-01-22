@@ -1,0 +1,5 @@
+export function homeButton() {
+  document.querySelector(".js-home-button").addEventListener("click", () => {
+    window.location.href = "/dashBoard.html";
+  });
+}
