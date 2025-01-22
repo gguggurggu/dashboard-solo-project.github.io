@@ -26,5 +26,5 @@ export function showDate() {
 
   const getDateHTML = document.querySelector(".js-today-date");
 
-  getDateHTML.innerHTML = `<span class="js-today-date">${today}</span>`;
+  getDateHTML.innerHTML = `<span class="today-date js-today-date">${today}</span>`;
 }

@@ -12,36 +12,21 @@
     <!--Top Menu-->
     <header class="top-menu">
       <button class="home-button">
-        <img
-          src="/images/dashBoard/house-button.png"
-          class="img-home-button"
-        />
+        <img src="/images/dashBoard/house-button.png" class="img-home-button" />
       </button>
       <span class="js-today-date"></span>
-      <hr>
-    <header/>
+    </header>
+
+    <hr />
 
     <div class="task-board">
-      <!-- Column: To-Do -->
+      <!-- Column: Pending -->
       <div class="task-column">
         <div class="column-header">
-          <h3>To-Do</h3>
-          <span class="task-count">9</span>
-        </div>
-        <div class="task-card">
-          <h4>Review and Update Job Descriptions</h4>
-          <p>Analyze current job descriptions and update as needed.</p>
-          <div class="task-meta">
-            <span>May 26, 2024</span>
-            <span>Checklist: 3/4</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Column: In Progress -->
-      <div class="task-column">
-        <div class="column-header">
-          <h3>On Progress</h3>
+          <h3>Pending</h3>
+          <button class="task-add-button">
+            <img src="/images/todo-icons/plus-button.png" />
+          </button>
           <span class="task-count">2</span>
         </div>
         <div class="task-card">
@@ -54,10 +39,26 @@
         </div>
       </div>
 
-      <!-- Column: Need Review -->
+      <!-- Column: In Progress -->
       <div class="task-column">
         <div class="column-header">
-          <h3>Need Review</h3>
+          <h3>In Progress</h3>
+          <span class="task-count">9</span>
+        </div>
+        <div class="task-card">
+          <h4>Review and Update Job Descriptions</h4>
+          <p>Analyze current job descriptions and update as needed.</p>
+          <div class="task-meta">
+            <span>May 26, 2024</span>
+            <span>Checklist: 3/4</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Column: Completed -->
+      <div class="task-column">
+        <div class="column-header">
+          <h3>Completed</h3>
           <span class="task-count">3</span>
         </div>
         <div class="task-card">
