@@ -23,13 +23,15 @@ export function renderTimeTracker() {
     if (!timerInterval) {
       timerInterval = setInterval(updateStopwatch, 1000);
       const buttonImage = startButton.querySelector("img");
-      buttonImage.src = "/images/stopwatch-icons/pause-button.png";
+      buttonImage.src =
+        "/dashboard-solo-project.github.io/images/stopwatch-icons/pause-button.png";
       startButton.classList.add("pause-button");
     } else {
       clearInterval(timerInterval);
       timerInterval = null;
       const buttonImage = startButton.querySelector("img");
-      buttonImage.src = "/images/stopwatch-icons/start-button.png";
+      buttonImage.src =
+        "/dashboard-solo-project.github.io/images/stopwatch-icons/start-button.png";
       startButton.classList.remove("pause-button");
     }
   });
@@ -44,7 +46,8 @@ export function renderTimeTracker() {
     if (startButton.classList.contains("pause-button")) {
       startButton.classList.remove("pause-button");
       const buttonImage = startButton.querySelector("img");
-      buttonImage.src = "/images/stopwatch-icons/start-button.png";
+      buttonImage.src =
+        "/dashboard-solo-project.github.io/images/stopwatch-icons/start-button.png";
       startButton.classList.remove("pause-button");
     }
   });
