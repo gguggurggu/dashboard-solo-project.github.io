@@ -4,7 +4,7 @@ export function renderTodoList() {
   const todoListContainer = document.querySelector(".js-to-do-ul");
   const emptyMessage = document.createElement("p");
   emptyMessage.className = "empty-message";
-  emptyMessage.innerHTML = `<img src="/images/todo-icons/empty.png"><span><strong>No plans yet?</strong> Let's make some magic!</span>`;
+  emptyMessage.innerHTML = `<img src="/dashboard-solo-project.github.io/images/todo-icons/empty.png"><span><strong>No plans yet?</strong> Let's make some magic!</span>`;
 
   const createTodoItem = (todo) => {
     const listItem = document.createElement("li");
@@ -12,7 +12,7 @@ export function renderTodoList() {
                 <button class="to-do-input-button to-do-delete-button js-to-do-delete-button">
                   <img
                     class="delete-button"
-                    src="/images/todo-icons/delete-button.png"
+                    src="/dashboard-solo-project.github.io/images/todo-icons/delete-button.png"
                   /> </button>`;
 
     listItem
